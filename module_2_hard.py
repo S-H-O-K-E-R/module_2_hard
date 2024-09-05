@@ -22,9 +22,9 @@ for i in range(n+1):
         if [j, i] not in pair and yes_no == 1:
             pair.append([i, j])
 
-print('Пары',*pair)
+print('Пары:',*pair)
 password = sum(pair, [])
-print('Код', *password)
+print('Код:', *password)
 
 
 
