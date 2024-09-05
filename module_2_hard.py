@@ -11,16 +11,16 @@ for i in range(n+1):
     if i == 0:
         continue
     for j in range(n+1):
-        if i == 0 or j == 0:
+        if i == 0 or j == 0 or i == j:
             continue
         elif n % (j+i) == 0:
             yes_no = 1
-            list_1.append([j, i])
+            list_1.append([i, j])
         else:
             yes_no != 1
             yes_no = 0
-        if [i, j] not in pair and yes_no == 1:
-            pair.append([j, i])
+        if [j, i] not in pair and yes_no == 1:
+            pair.append([i, j])
 
 print('Пары',*pair)
 password = sum(pair, [])
